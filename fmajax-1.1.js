@@ -6,8 +6,15 @@
  *
  * Created by Ryan Simms for beezwax data tools
  * ryansimms.com
- *
+ * 
+ * 
  * Date: 2015-9-10
+ * 
+ * EDITED 2018-07-10  Joshua Willing - Now properly encodes urls for Windows. 
+ *   Checks navigator.platform for the string "Win" and uses encodeURI if found.
+ * 
+ *  
+ *
  */
 (function (window, document, undefined) {
   'use strict';
@@ -201,7 +208,9 @@
         }
       }
       url = fmpurl + "?script=" + encodeURIComponent(p['script']) + param_str + var_str;
-
+      if (navigator.platform.indexOf('Win') > -1) {
+        url = encodeURI(url);
+      }
       href = window.location.href;
       //window.location.href = url;
       var body = document.getElementsByTagName('body')[0];
