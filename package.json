@@ -1,0 +1,25 @@
+{
+  "name": "fmajax",
+  "version": "1.2.0",
+  "description": "##### !!! ##### macOS 10.12.4 includes a security update which prevents a file:/ url which includes the boot volume name from being valid.  For this reason, getting the url of a file in the temp directory is no longer as simple as using `Get ( TemporaryPath )`.  FMAjax now contains a fix, but if you need to update an exiting solution, you can copy over `fmajax.return_temp_path` and copy the new contents of `fmajax.set_hash ( data )`. ##### !!!",
+  "main": "fmajax-1.1.js",
+  "scripts": {
+    "test": "phantomjs ./node_modules/mocha-phantomjs-core/mocha-phantomjs-core.js ./tests.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beezwax/FMAjax.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beezwax/FMAjax/issues"
+  },
+  "homepage": "https://github.com/beezwax/FMAjax#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "mocha-phantomjs-core": "^2.1.2"
+  },
+  "eslintIgnore": ["test.js"]
+}
