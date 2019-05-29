@@ -1,8 +1,12 @@
 # FMAjax
 
-##### !!!
-##### macOS 10.12.4 includes a security update which prevents a file:/ url which includes the boot volume name from being valid.  For this reason, getting the url of a file in the temp directory is no longer as simple as using `Get ( TemporaryPath )`.  FMAjax now contains a fix, but if you need to update an exiting solution, you can copy over `fmajax.return_temp_path` and copy the new contents of `fmajax.set_hash ( data )`.
-##### !!!
+Updates in v1.2:
+<ul>
+<li>Use camelCase instead of snake_case for all method and options</li>
+<li>Remove include_url_params option from callFmpURL</li>
+<li>Clarify that "Automatically encode URL" should be unchecked in the web viewer to prevent OS differences</li>
+<li>Remove internal _queue method</li>
+</ul>
  
 #
 
